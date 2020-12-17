@@ -1,0 +1,37 @@
+﻿@model Person
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+    <h1>@ViewBag.Time</h1>
+</div>
+<h3><b>Person:</b></h3>
+
+<table class="table">
+    <tr>
+        <td>Ad:</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Soyad:</td>
+        <td>@Model.Surname</td>
+    </tr>
+    <tr>
+        <td>Yaş:</td>
+        <td>@Model.Age</td>
+    </tr>
+    <tr>
+        <td>Cinsiyet:</td>
+        <td>
+            <input type="checkbox" name="gender" id="gender" checked="@Model.Gender" /> Erkek
+            <input type="checkbox" name="gender" id="gender" unchecked="@Model.Gender" /> Kız
+
+        </td>
+    </tr>
+</table>
